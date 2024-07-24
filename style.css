@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+@media only screen and (min-width: 800px) {
+    body {
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+    .icon { margin: 5px; }
+}
+
+:root { background-color: yellow; }
+* { margin: 0; }
+
+#body {
+    background-color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    background-color: black;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#avatar {
+    margin-left: 2vw;
+}
+
+#computer {
+    height: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 2vw;
+}
+
+#footer {
+    background-color: black;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    margin: 10px;
+}

@@ -1,0 +1,54 @@
+.hello {
+    width: 80%;
+    display: none;
+    flex-direction: column;
+}
+
+#hello {
+    width: 100%;
+    border-style: solid;
+    border-radius: 25px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+#hello-t {
+    background-color: red;
+    border-radius: 20px 20px 0 0;
+}
+
+#hello-t h1 {
+    color: white;
+    font-size: 10vw;
+    text-align: center;
+}
+
+#hello-t h2 {
+    color: white;
+    font-size: 3vw;
+    text-align: center;
+    padding-bottom: 1vh;
+}
+
+#hello-p {
+    background-color: white;
+    font-family: 'Rock Salt';
+    font-size: 4vw;
+    font-weight: 800;
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+#hello-b {
+    background-color: red;
+    width: 100%;
+    height: 3vh;
+    border-radius: 0 0 20px 20px;
+}
+
+#hello-text {
+    font-size: 2vw;
+    text-align: center;
+    padding-bottom: 5vh;
+}

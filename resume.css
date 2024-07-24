@@ -1,0 +1,154 @@
+@media only screen and (min-width: 800px) {
+    .stat {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .stat-name {
+        background-color: white;
+        width: 80%;
+        font-size: 2vw;
+        font-weight: bold;
+        margin-top: 1vw;
+        border-style: solid;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: .5vw;
+    }
+    
+    .stat-value {
+        background-color: white;
+        width: 65%;
+        height: 6vw;
+        font-size: 4vw;
+        font-weight: bold;
+        border-style: solid;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .stat-bonus {
+        background-color: white;
+        font-size: 2vw;
+        font-weight: bold;
+        border-style: solid;
+        border-radius: 100%;
+        padding: .5vw;
+        position: relative;
+        top: -2vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .stat {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .stat-name {
+        background-color: white;
+        width: 80%;
+        font-weight: bold;
+        font-size: 3vw;
+        margin-top: 1vw;
+        border-style: solid;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: .5vw;
+    }
+    
+    .stat-value {
+        background-color: white;
+        width: 65%;
+        height: 9vw;
+        font-size: 6vw;
+        font-weight: bold;
+        border-style: solid;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .stat-bonus {
+        background-color: white;
+        font-size: 3vw;
+        font-weight: bold;
+        border-style: solid;
+        border-radius: 100%;
+        padding: 1vw;
+        position: relative;
+        top: -2.5vw;
+    }
+}
+
+#portrait {
+    display: flex;
+    justify-content: center;
+    padding: 2vw;
+}
+
+#me {
+    width: 30%;
+    border-style: solid;
+    border-radius: 25px;
+}
+
+#info {
+    display: flex;
+}
+
+.wizard {
+    width: 10vw;
+}
+
+#info img:first-of-type {
+    margin-left: 3vw;
+}
+
+#info img:last-of-type {
+    margin-right: 3vw;
+}
+
+#character {
+    width: 100%;
+    font-size: 3vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.5vw;
+}
+
+#stats {
+    display: flex;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+#schools {
+    background-color: red;
+    display: flex;
+}
+
+.school {
+    width: 100%;
+    display: flex;
+}
+
+.school-img {
+    background-color: yellow;
+    width: 5vw;
+    height: 5vw;
+}
