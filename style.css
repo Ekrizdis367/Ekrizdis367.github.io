@@ -18,7 +18,7 @@
     .icon { margin: 5px; }
 }
 
-:root { background-color: yellow; }
+:root { background-color: rgb(15, 15, 15); }
 * { margin: 0; }
 
 #body {
@@ -26,7 +26,6 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 #header {
@@ -38,14 +37,43 @@
 }
 
 #avatar {
-    margin-left: 2vw;
+    margin: 1vw;
+}
+
+#comp-icon {
+    width: 5vw;
 }
 
 #computer {
-    height: 50%;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 2vw;
+    background: none;
+    border: none;
+    outline: none;
+    width: 4.5vw;
+    margin: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#computer:hover {
+    cursor: pointer;
+    animation: none;
 }
 
 #footer {
@@ -56,6 +84,7 @@
     justify-content: center;
 }
 
-.icon {
-    margin: 10px;
+#footer a {
+    display: flex;
+    margin: 5px;
 }

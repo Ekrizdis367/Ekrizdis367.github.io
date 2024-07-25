@@ -1,10 +1,10 @@
-.hello {
+#hello {
     width: 80%;
-    display: none;
+    display: flex;
     flex-direction: column;
 }
 
-#hello {
+#hello-page {
     width: 100%;
     border-style: solid;
     border-radius: 25px;
@@ -19,6 +19,7 @@
 
 #hello-t h1 {
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 10vw;
     text-align: center;
 }

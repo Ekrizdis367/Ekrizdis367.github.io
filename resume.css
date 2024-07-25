@@ -1,103 +1,66 @@
 @media only screen and (min-width: 800px) {
-    .stat {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
     
     .stat-name {
-        background-color: white;
-        width: 80%;
         font-size: 2vw;
-        font-weight: bold;
-        margin-top: 1vw;
-        border-style: solid;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        top: .5vw;
     }
     
     .stat-value {
-        background-color: white;
-        width: 65%;
         height: 6vw;
         font-size: 4vw;
-        font-weight: bold;
-        border-style: solid;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
     }
     
     .stat-bonus {
-        background-color: white;
         font-size: 2vw;
-        font-weight: bold;
-        border-style: solid;
-        border-radius: 100%;
         padding: .5vw;
-        position: relative;
         top: -2vw;
     }
 }
 
 @media only screen and (max-width: 800px) {
-    .stat {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
     
     .stat-name {
-        background-color: white;
-        width: 80%;
-        font-weight: bold;
         font-size: 3vw;
-        margin-top: 1vw;
-        border-style: solid;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        top: .5vw;
     }
     
     .stat-value {
-        background-color: white;
-        width: 65%;
         height: 9vw;
         font-size: 6vw;
-        font-weight: bold;
-        border-style: solid;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
     }
     
     .stat-bonus {
-        background-color: white;
         font-size: 3vw;
-        font-weight: bold;
-        border-style: solid;
-        border-radius: 100%;
         padding: 1vw;
-        position: relative;
         top: -2.5vw;
     }
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+#resume {
+    display: none;
+    flex-direction: column;
 }
 
 #portrait {
     display: flex;
     justify-content: center;
     padding: 2vw;
+}
+
+#bio {
+    font-weight: bold;
+    font-size: 3vw;
+}
+
+#email {
+    font-style: italic;
+    font-size: 2.5vw;
+}
+
+#location {
+    font-size: 2vw;
 }
 
 #me {
@@ -111,7 +74,7 @@
 }
 
 .wizard {
-    width: 10vw;
+    width: 9vw;
 }
 
 #info img:first-of-type {
@@ -137,18 +100,161 @@
     margin-right: 2vw;
 }
 
+.stat {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-name {
+    background-color: white;
+    width: 85%;
+    font-weight: bold;
+    margin-top: 1vw;
+    border-style: solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: .5vw;
+}
+
+.stat-value {
+    background-color: white;
+    width: 65%;
+    font-weight: bold;
+    border-style: solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.stat-bonus {
+    background-color: white;
+    font-weight: bold;
+    border-style: solid;
+    border-radius: 100%;
+    position: relative;
+}
+
+h1 {
+    font-size: 3vw;
+    font-family: 'Cinzel Decorative';
+    text-align: center;
+    padding-top: 3vw;
+    padding-bottom: 2vw;
+}
+
 #schools {
-    background-color: red;
     display: flex;
 }
 
 .school {
     width: 100%;
+    font-size: 2vw;
+    margin: 1vw;
+    padding-left: 2vw;
     display: flex;
 }
 
+.school ~ .school {
+    padding-right: 2vw;
+    padding-left: 0;
+}
+
 .school-img {
-    background-color: yellow;
+    width: 7vw;
+    height: 7vw;
+    margin-right: .5vw;
+}
+
+.school-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.school-name {
+    font-weight: bold;
+}
+
+.school-degree {
+    font-style: italic;
+}
+
+#feats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feat {
+    background-color: rgb(210, 189, 228);
+    width: 28%;
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
+    border-style: solid;
+    border-radius: 10px;
+    box-shadow: 2px 3px 10px;
+    margin: 1vw;
+}
+
+#skills {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.app {
     width: 5vw;
     height: 5vw;
+    padding: 1vw;
+}
+
+#quests-list {
+    font-size: 2vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+#quests-list li {
+    padding-bottom: 1vw;
+}
+
+#parties {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+}
+
+.party {
+    display: flex;
+    padding-bottom: 1vw;
+}
+
+.party-image {
+    width: 6vw;
+    border-style: solid;
+    box-shadow: 2px 2px 3px 2px;
+}
+
+.party-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.5vw;
+}
+
+.party-name {
+    font-size: 2.5vw;
+}
+
+.party-title {
+    font-size: 2vw;
+    font-weight: bold;
 }

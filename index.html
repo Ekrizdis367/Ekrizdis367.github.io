@@ -11,7 +11,7 @@
         <link rel="stylesheet" href=".\style.css">
         <link rel="stylesheet" href=".\hello.css">
         <link rel="stylesheet" href=".\resume.css">
-        <link rel="script" href=".\script.js">
+        <link rel="stylesheet" href=".\cmd.css">
 
     </head>
 
@@ -20,13 +20,31 @@
         <div id="header">
             <img class="icon" id="avatar" src=".\pics\avatar.png">
             <div style="width: 100%;"></div>
-            <img class="icon" id="computer" src=".\pics\computer.png">
+            <button id="computer" onclick="cmd()">
+                <img id="comp-icon" src=".\pics\computer.png">
+            </button>
         </div>
 
         <div id="body">
 
-            <div class="hello">
-                <div id="hello">
+            <div id="cmd" draggable="true">
+                <div id="cmd-header">
+                    <p>Command Spell</p>
+                    <button type="button" class="btn-close" aria-label="Close" onclick="cmd()">
+                        <img id="close-button" src="https://png.pngtree.com/png-vector/20220628/ourmid/pngtree-icon-close-button-incorrect-forbidden-png-image_5286028.png">
+                    </button>
+                </div>
+                <form id="cmd-textbox">
+                    <p>C:\Wizard\Visitor></p>
+                    <input type="text" id="command" name="tCommand" maxlength="40" placeholder="Try &quot;get-help&quot; for available commands." onsubmit="closeCMD()">
+                </form>
+                <div id="cmd-result">
+                    <p id="cmd-result-p"></p>
+                </div>
+            </div>
+
+            <div id="hello" class="page">
+                <div id="hello-page">
                     <div id="hello-t">
                         <h1>Hello</h1>
                         <h2>My name is</h2>
@@ -39,7 +57,7 @@
                 </p>
             </div>
 
-            <div id="resume">
+            <div id="resume" class="page">
                 <div id="portrait">
                     <img id="me" src=".\pics\me.jpg">
                 </div>
@@ -54,53 +72,156 @@
                 </div>
                 <div id="stats">
                     <div class="stat">
-                        <div class="stat-name">Name</div>
-                        <div class="stat-value">15</div>
+                        <div class="stat-name">NET</div>
+                        <div class="stat-value">12</div>
                         <div class="stat-bonus">+1</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-name">Name</div>
-                        <div class="stat-value">15</div>
+                        <div class="stat-name">SEC</div>
+                        <div class="stat-value">12</div>
                         <div class="stat-bonus">+1</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-name">Name</div>
-                        <div class="stat-value">15</div>
-                        <div class="stat-bonus">+1</div>
+                        <div class="stat-name">IAM</div>
+                        <div class="stat-value">14</div>
+                        <div class="stat-bonus">+2</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-name">Name</div>
-                        <div class="stat-value">15</div>
-                        <div class="stat-bonus">+1</div>
+                        <div class="stat-name">CLOUD</div>
+                        <div class="stat-value">16</div>
+                        <div class="stat-bonus">+3</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-name">Name</div>
-                        <div class="stat-value">15</div>
-                        <div class="stat-bonus">+1</div>
+                        <div class="stat-name">CODE</div>
+                        <div class="stat-value">20</div>
+                        <div class="stat-bonus">+5</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-name">Name</div>
-                        <div class="stat-value">15</div>
-                        <div class="stat-bonus">+1</div>
+                        <div class="stat-name">VM</div>
+                        <div class="stat-value">16</div>
+                        <div class="stat-bonus">+3</div>
                     </div>
                 </div>
+                <h1>Schools of Magic</h1>
                 <div id="schools">
                     <div class="school">
-                        <div class="school-img">
-
-                        </div>
+                        <img src=".\pics\park.png" class="school-img">
                         <div class="school-info">
                             <div class="school-name">Park University</div>
-                            <div class="school-degree">B.S Computer Science</div>
+                            <div class="school-degree">B.S. Computer Science</div>
                         </div>
                     </div>
                     <div class="school">
-                        <div class="school-img">
-
-                        </div>
+                        <img src=".\pics\ccaf.png" class="school-img">
                         <div class="school-info">
-                            <div class="school-name">Park University</div>
-                            <div class="school-degree">B.S Computer Science</div>
+                            <div class="school-name">Community College of the Air Force</div>
+                            <div class="school-degree">A.S. Electrical Engineering</div>
+                        </div>
+                    </div>
+                </div>
+                <h1>Feats</h1>
+                <div id="feats">
+                    <div class="feat">Adaptable</div>
+                    <div class="feat">Problem-Solver</div>
+                    <div class="feat">Proactive</div>
+                    <div class="feat">Leader</div>
+                    <div class="feat">Fast-Learner</div>
+                </div>
+                <h1>Skills</h1>
+                <div id="skills">
+                    <img class="app" src=".\pics\apps\abnormal.png">
+                    <img class="app" src=".\pics\apps\Atlassian.png">
+                    <img class="app" src=".\pics\apps\aw.png">
+                    <img class="app" src=".\pics\apps\AWS.png">
+                    <img class="app" src=".\pics\apps\azure.png">
+                    <img class="app" src=".\pics\apps\Bitwarden.png">
+                    <img class="app" src=".\pics\apps\Cohesity.png">
+                    <img class="app" src=".\pics\apps\crowdstrike.png">
+                    <img class="app" src=".\pics\apps\Dell.png">
+                    <img class="app" src=".\pics\apps\Druva.png">
+                    <img class="app" src=".\pics\apps\FreshService.png">
+                    <img class="app" src=".\pics\apps\Github.png">
+                    <img class="app" src=".\pics\apps\HP.png">
+                    <img class="app" src=".\pics\apps\Linux.png">
+                    <img class="app" src=".\pics\apps\Microsoft.png">
+                    <img class="app" src=".\pics\apps\mimecast.png">
+                    <img class="app" src=".\pics\apps\Nasuni.png">
+                    <img class="app" src=".\pics\apps\pagerduty.png">
+                    <img class="app" src=".\pics\apps\pbi.png">
+                    <img class="app" src=".\pics\apps\powershell.png">
+                    <img class="app" src=".\pics\apps\Pure.png">
+                    <img class="app" src=".\pics\apps\Python.png">
+                    <img class="app" src=".\pics\apps\SailPoint.png">
+                    <img class="app" src=".\pics\apps\SolarWinds.png">
+                    <img class="app" src=".\pics\apps\Synology.png">
+                    <img class="app" src=".\pics\apps\Tanium.png">
+                    <img class="app" src=".\pics\apps\vscode.png">
+                    <img class="app" src=".\pics\apps\VMWare.png">
+                </div>
+                <h1>Quests</h1>
+                <div id="quests" class="section">
+                    <ul id="quests-list">
+                        <li>Remediated CrowdStrike outage & returned critical servers to operation.</li>
+                        <li>Archived 40TB & cleaned up millions of EDI files.</li>
+                        <li>Rebuilt & Rearchitected Active Directory - DCs, OUs, Objects, Sites & Services, etc.</li>
+                        <li>Migrated ADFS to Azure SSO and decommissioned excess infrastructure.</li>
+                        <li>Migrated SCCM to Tanium and decommissioned excess infrastructure.</li>
+                        <li>Migrated and rebuilt Password Management</li>
+                        <li>Rebuilt the RDS Farm w/ FSLogix and migrated all users.</li>
+                        <li>Scripted Daily Email Notifications - Expiring Passwords & Expiring Contractor lists to respective managers.</li>
+                        <li>Built out Azure AVD VDI for various use cases - IT, APAC, Data & Analytics, etc.</li>
+                        <li>Built out Scan Guns into Intune and completed the initial standup usage of Intune</li>
+                        <li>Rebuilt All Data Backups & Disaster Recovery processes.</li>
+                        <li>Cleaned VMWare - Decommissioned excess sites, VMs, & infrastructure - linked the vCenters.</li>
+                        <li>Reorganized VMWare folder, datacenter, and cluster organization.</li>
+                        <li>Configured dozens of SSO applications through Azure.</li>
+                        <li>Built out documentation from the ground up on processes & systems.</li>
+                        <li>Led the team through Agile Project Management & tracked progress on projects.</li>
+                        <li>Automated SOX evidence gathering for various systems.</li>
+                    </ul>
+                </div>
+                <h1>Adventuring Parties</h1>
+                <div id="parties" class="section">
+                    <div class="party">
+                        <img class="party-image" src=".\pics\funko.png">
+                        <div class="party-info">
+                            <div class="party-name"><span style="font-weight: bold;">Funko</span> | <span style="font-style: italic;">Everett, WA</span></div>
+                            <div class="party-title">Sr. IT Systems Engineer</div>
+                        </div>
+                    </div>
+                    <div class="party">
+                        <img class="party-image" src=".\pics\funko.png">
+                        <div class="party-info">
+                            <div class="party-name"><span style="font-weight: bold;">Funko</span> | <span style="font-style: italic;">Everett, WA</span></div>
+                            <div class="party-title">IT Systems Engineer</div>
+                        </div>
+                    </div>
+                    <div class="party">
+                        <img class="party-image" src=".\pics\funko.png">
+                        <div class="party-info">
+                            <div class="party-name"><span style="font-weight: bold;">Funko</span> | <span style="font-style: italic;">Everett, WA</span></div>
+                            <div class="party-title">Sr. Service Desk Technician</div>
+                        </div>
+                    </div>
+                    <div class="party">
+                        <img class="party-image" src=".\pics\fortive.png">
+                        <div class="party-info">
+                            <div class="party-name"><span style="font-weight: bold;">Fortive</span> | <span style="font-style: italic;">Everett, WA</span></div>
+                            <div class="party-title">Service Desk Technician, Lead</div>
+                        </div>
+                    </div>
+                    <div class="party">
+                        <img class="party-image" src=".\pics\fortive.png">
+                        <div class="party-info">
+                            <div class="party-name"><span style="font-weight: bold;">Fortive</span> | <span style="font-style: italic;">Everett, WA</span></div>
+                            <div class="party-title">Service Desk Technician</div>
+                        </div>
+                    </div>
+                    <div class="party">
+                        <img class="party-image" src=".\pics\af.png">
+                        <div class="party-info">
+                            <div class="party-name"><span style="font-weight: bold;">U.S. Air Force</span> | <span style="font-style: italic;">Minot, ND</span></div>
+                            <div class="party-title">Electro-Mechanical Engineer</div>
                         </div>
                     </div>
                 </div>
@@ -109,10 +230,14 @@
         </div>
         
         <div id="footer">
-            <img class="icon" src=".\pics\links\github.png">
-            <img class="icon" src=".\pics\links\linkedin.png">
+            <a href="https://www.github.com/Ekrizdis367?tab=repositories" class="icon"><img class="icon" src=".\pics\links\github.png"></a>
+            <a href="https://wwww.linkedin.com/in/matthew-newton-955603126" class="icon"><img class="icon" src=".\pics\links\linkedin.png"></a>
         </div>
 
     </body>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src=".\script.js"></script>
 
 </html>
