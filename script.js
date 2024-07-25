@@ -57,6 +57,9 @@ function run(command) {
         case 'dir':
             result.innerText = "There are no directories, this is a website?"
             break;
+        case 'cd':
+            result.innerText = "There are no directories, this is a website?"
+            break;
         case 'exit':
             cmd()
             break;
